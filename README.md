@@ -9,17 +9,31 @@ A Chrome extension that integrates OpenAI's GPT-4 for intelligent assistance whi
 - 📝 Context Menu Integration
 - 🔒 Secure API Key Handling
 
-## Installation
+## Getting Started
 
-1. Clone the repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the extension directory
+### Local Setup
 
-## Configuration
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/ai-assistant-extension.git
+cd ai-assistant-extension
+```
 
-1. Open `background.js` and replace `your-api-key` with your OpenAI API key
-2. The extension uses the GPT-4 model by default
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Configure the extension:
+   - Open `background.js`
+   - Replace `your-api-key` with your OpenAI API key
+
+### Loading the Extension in Chrome
+
+1. Open Chrome and navigate to `chrome://extensions/`
+2. Enable "Developer mode" in the top right
+3. Click "Load unpacked" and select the extension directory
+4. The extension icon should appear in your Chrome toolbar
 
 ## Project Structure
 
@@ -33,11 +47,11 @@ A Chrome extension that integrates OpenAI's GPT-4 for intelligent assistance whi
 
 ## Development
 
-The extension consists of:
-
-- Popup UI for chat interface
-- Background script for API communication
-- Content script for page interaction
+To make changes:
+1. Modify the code as needed
+2. Go to `chrome://extensions/`
+3. Click the refresh icon on the extension card
+4. Test your changes
 
 ## Security Note
 
@@ -45,9 +59,3 @@ The OpenAI API key should be stored securely. In a production environment, consi
 - Using a backend service to proxy requests
 - Implementing proper key management
 - Adding user authentication
-
-## Usage
-
-1. Click the extension icon to open the chat interface
-2. Type your message and press Enter or click Send
-3. Select text on any webpage and use the context menu for quick access
