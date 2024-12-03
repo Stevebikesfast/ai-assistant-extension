@@ -1,66 +1,63 @@
-# AI Assistant App
+# AI Assistant Platform
 
-A Next.js application featuring AI assistance powered by OpenAI, with Supabase authentication and Stripe payments.
+A Next.js application with OpenAI integration, Supabase authentication, and Stripe payments.
+
+## Features
+
+- 🔐 Authentication with Supabase
+- 🤖 OpenAI Assistant Integration
+- 💳 Stripe Payment Processing
+- 🔒 Protected Routes
+- 💬 Real-time Chat Interface
+- 📱 Responsive Design
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Authentication**: Supabase Auth
-- **Database**: Supabase
-- **AI Integration**: OpenAI
-- **Payments**: Stripe
-- **UI Components**: Radix UI
+- Next.js 13+ with App Router
+- TypeScript
+- Tailwind CSS
+- Supabase
+- OpenAI API
+- Stripe
 
 ## Getting Started
 
 1. Clone the repository
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. Copy the environment variables:
-   ```bash
-   cp .env.local.example .env.local
-   ```
+3. Copy `.env.local.example` to `.env.local` and fill in your environment variables:
+```bash
+cp .env.local.example .env.local
+```
 
-4. Fill in the environment variables in `.env.local`:
-   - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key
-   - `OPENAI_API_KEY`: Your OpenAI API key
-   - `STRIPE_SECRET_KEY`: Your Stripe secret key
-   - `STRIPE_WEBHOOK_SECRET`: Your Stripe webhook secret
+4. Start the development server:
+```bash
+npm run dev
+```
 
-5. Run the development server:
-   ```bash
-   npm run dev
-   ```
+## Environment Variables
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
+Required environment variables:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `STRIPE_SECRET_KEY`
+- `STRIPE_PRICE_ID`
+- `STRIPE_WEBHOOK_SECRET`
+- `NEXT_PUBLIC_URL`
 
 ## Project Structure
 
 ```
-/src
-  /app - Pages and layouts using App Router
-  /components - Reusable UI components
-  /lib 
-    /supabase - Supabase client configuration
-    /openai - OpenAI integration and handlers
-    /stripe - Stripe payment integration
-    /types - TypeScript interfaces
-  /hooks - Custom React hooks
-  /utils - Helper functions
-  /styles - Global styles and Tailwind config
-```
-
-## Features
-
-- Supabase Authentication
-- OpenAI Integration
-- Stripe Payments
-- Real-time Chat Interface
-- Profile Management
-- Subscription Handling
+src/
+├── app/                # Next.js 13 app directory
+├── components/         # React components
+├── hooks/             # Custom React hooks
+└── lib/               # Utility functions and configurations
+    ├── openai/        # OpenAI integration
+    ├── stripe/        # Stripe integration
+    ├── supabase/      # Supabase client
+    └── types/         # TypeScript types
