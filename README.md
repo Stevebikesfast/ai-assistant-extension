@@ -32,13 +32,25 @@ npm install
 - 💬 Chat Interface
 - 📝 Context Menu Integration
 - 🔒 Secure API Key Handling
+- 🚀 Automated Builds via GitHub Actions
+
+## Automated Builds
+
+This repository includes GitHub Actions that automatically:
+- Build and package the extension
+- Create a new release with each push to main
+- Provide downloadable ZIP files of the extension
+
+You can find the latest version in the Releases section of the repository.
 
 ## Loading the Extension in Chrome
 
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Enable "Developer mode" in the top right
-3. Click "Load unpacked" and select the extension directory
-4. Configure your OpenAI API key in `background.js`
+1. Download the latest release from the Releases page
+   OR use the source code directly after cloning
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension directory
+5. Configure your OpenAI API key in `background.js`
 
 ## Project Structure
 
