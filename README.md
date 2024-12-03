@@ -1,63 +1,53 @@
-# AI Assistant Platform
+# AI Assistant Chrome Extension
 
-A Next.js application with OpenAI integration, Supabase authentication, and Stripe payments.
+A Chrome extension that integrates OpenAI's GPT-4 for intelligent assistance while browsing.
 
 ## Features
 
-- 🔐 Authentication with Supabase
-- 🤖 OpenAI Assistant Integration
-- 💳 Stripe Payment Processing
-- 🔒 Protected Routes
-- 💬 Real-time Chat Interface
-- 📱 Responsive Design
+- 🤖 OpenAI GPT-4 Integration
+- 💬 Chat Interface
+- 📝 Context Menu Integration
+- 🔒 Secure API Key Handling
 
-## Tech Stack
-
-- Next.js 13+ with App Router
-- TypeScript
-- Tailwind CSS
-- Supabase
-- OpenAI API
-- Stripe
-
-## Getting Started
+## Installation
 
 1. Clone the repository
-2. Install dependencies:
-```bash
-npm install
-```
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension directory
 
-3. Copy `.env.local.example` to `.env.local` and fill in your environment variables:
-```bash
-cp .env.local.example .env.local
-```
+## Configuration
 
-4. Start the development server:
-```bash
-npm run dev
-```
-
-## Environment Variables
-
-Required environment variables:
-
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-- `STRIPE_SECRET_KEY`
-- `STRIPE_PRICE_ID`
-- `STRIPE_WEBHOOK_SECRET`
-- `NEXT_PUBLIC_URL`
+1. Open `background.js` and replace `your-api-key` with your OpenAI API key
+2. The extension uses the GPT-4 model by default
 
 ## Project Structure
 
 ```
-src/
-├── app/                # Next.js 13 app directory
-├── components/         # React components
-├── hooks/             # Custom React hooks
-└── lib/               # Utility functions and configurations
-    ├── openai/        # OpenAI integration
-    ├── stripe/        # Stripe integration
-    ├── supabase/      # Supabase client
-    └── types/         # TypeScript types
+├── manifest.json        # Extension manifest
+├── popup.html          # Extension popup interface
+├── popup.js            # Popup logic
+├── background.js       # Background service worker
+└── content.js          # Content script for page interaction
+```
+
+## Development
+
+The extension consists of:
+
+- Popup UI for chat interface
+- Background script for API communication
+- Content script for page interaction
+
+## Security Note
+
+The OpenAI API key should be stored securely. In a production environment, consider:
+- Using a backend service to proxy requests
+- Implementing proper key management
+- Adding user authentication
+
+## Usage
+
+1. Click the extension icon to open the chat interface
+2. Type your message and press Enter or click Send
+3. Select text on any webpage and use the context menu for quick access

@@ -1,28 +1,12 @@
 {
+  "name": "ai-assistant-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension with OpenAI GPT-4 integration",
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "latest",
-    "@stripe/stripe-js": "latest",
-    "@supabase/auth-helpers-nextjs": "^0.10.0",
-    "@supabase/supabase-js": "latest",
-    "next": "^15.0.3",
-    "openai": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "stripe": "^17.4.0"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest"
+    "openai": "latest"
   }
 }
